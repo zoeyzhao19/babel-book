@@ -13,7 +13,7 @@ const sourceCode = `
         console.info(2);
     }
 
-    export default class Clazz {
+    export default class Class {
         say() {
             console.debug(3);
         }
@@ -25,19 +25,19 @@ const sourceCode = `
 
 const ast = parser.parse(sourceCode, {
   sourceType: 'unambiguous',
-  plugins: ['jsx']
+  plugins: ['jsx'],
 });
+const targetCalleeName = ['log', 'info', 'error', 'debug'].map((item) => `console.${item}`);
 
 traverse.default(ast, {
-  CallExpression(path, state) {
-    console.log('path', path)
-    if(types.isMemberExpression(path.node.callee) && path.node.callee.object.name === 'console' && 
-    ['log', 'info', 'error', 'debug'].includes(path.node.callee.property.name)) {
+  CallExpression(path) {
+    const calleeName = generate.default(path.node.callee).code;
+    if (targetCalleeName.includes(calleeName)) {
       const { line, column } = path.node.loc.start;
-      path.node.arguments.unshift(types.stringLiteral(`filename: (${line}, ${column})`))
+      path.node.arguments.unshift(types.stringLiteral(`filename: (${line}, ${column})`));
     }
-  }
+  },
 });
 
-const { code, map } = generate.default(ast);
-console.log(code)
+const { code } = generate.default(ast);
+console.log(code);

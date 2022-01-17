@@ -26,12 +26,12 @@ const sourceCode = `
 
 const ast = parser.parse(sourceCode, {
   sourceType: 'unambiguous',
-  plugins: ['jsx']
+  plugins: ['jsx'],
 });
-const targetCalleeName = ['log', 'info', 'error', 'debug'].map(item => `console.${item}`);
+const targetCalleeName = ['log', 'info', 'error', 'debug'].map((item) => `console.${item}`);
 
 traverse.default(ast, {
-  CallExpression(path, state) {
+  CallExpression(path) {
     if (path.node.isNew) {
       return;
     }
@@ -41,15 +41,15 @@ traverse.default(ast, {
       const newNode = template.default.expression(`console.log("filename: (${line}, ${column})")`)();
       newNode.isNew = true;
 
-      if(path.findParent(p => p.isJSXElement())) {
+      if (path.findParent((p) => p.isJSXElement())) {
         path.replaceWith(types.arrayExpression([newNode, path.node]));
         path.skip();
       } else {
         path.insertBefore(newNode);
       }
     }
-  }
+  },
 });
 
-const { code, map } = generate.default(ast);
-console.log(code)
+const { code } = generate.default(ast);
+console.log(code);
