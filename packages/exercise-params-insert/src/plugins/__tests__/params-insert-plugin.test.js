@@ -1,5 +1,5 @@
 import pluginTester from 'babel-plugin-tester';
-import insertParametersPlugin from '../params-insert-plugin.js'
+import insertParametersPlugin from '../params-insert-plugin.js';
 
 pluginTester({
   plugin: insertParametersPlugin,
@@ -7,8 +7,8 @@ pluginTester({
   babelOptions: {
     parserOpts: {
       sourceType: 'unambiguous',
-      plugins: ['jsx'] 
-    }
+      plugins: ['jsx'],
+    },
   },
   tests: {
     'console.xx前插入了CallExpression的AST': {
@@ -19,7 +19,7 @@ pluginTester({
             console.info(2);
         }
     
-        export default class Clazz {
+        export default class Class {
             say() {
                 console.debug(3);
             }
@@ -28,7 +28,7 @@ pluginTester({
             }
         }
         `,
-      snapshot: true
-    }
-  }
-})
+      snapshot: true,
+    },
+  },
+});
