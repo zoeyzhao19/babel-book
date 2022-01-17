@@ -7,7 +7,6 @@ function func() {
 export default class Class {
   say() {
     console.debug(3);
-    console.log('测试commit');
   }
 
   render() {
