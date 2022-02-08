@@ -6,6 +6,9 @@
   "repository": "git@github.com:zoeyzhao19/babel-book.git",
   "author": "赵龙生 <zhaolongsheng@tenwit.com>",
   "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",

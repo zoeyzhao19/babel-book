@@ -14,11 +14,11 @@ pluginTester({
     'console.xx前插入了CallExpression的AST': {
       code: `
         console.log(1);
-    
+
         function func() {
             console.info(2);
         }
-    
+
         export default class Class {
             say() {
                 console.debug(3);
@@ -30,5 +30,6 @@ pluginTester({
         `,
       snapshot: true,
     },
+    'simple test': { code: '"hello";', snapshot: true },
   },
 });

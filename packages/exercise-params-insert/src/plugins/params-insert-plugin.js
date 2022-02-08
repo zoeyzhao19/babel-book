@@ -8,8 +8,6 @@ module.exports = ({ types, template }) => {
           return;
         }
         const calleeName = path.get('callee').toString();
-        console.log('path.get(callee)', path.get('callee'));
-        console.log('calleeName', calleeName);
         if (targetCalleeName.includes(calleeName)) {
           const { line, column } = path.node.loc.start;
           const newNode = template.expression(`console.log("filename: (${line}, ${column})")`)();
