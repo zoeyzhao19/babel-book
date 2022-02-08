@@ -1,5 +1,5 @@
-import pluginTester from 'babel-plugin-tester';
-import insertParametersPlugin from '../params-insert-plugin.js';
+const pluginTester = require('babel-plugin-tester').default;
+const insertParametersPlugin = require('../params-insert-plugin.js');
 
 pluginTester({
   plugin: insertParametersPlugin,

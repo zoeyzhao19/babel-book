@@ -1,8 +1,7 @@
-import parser from '@babel/parser';
-import traverse from '@babel/traverse';
-import generate from '@babel/generator';
-import types from '@babel/types';
-
+const { parse } = require('@babel/parser');
+const traverse = require('@babel/traverse').default;
+const generate = require('@babel/generator').default;
+const types = require('@babel/types');
 /**
  * 在console中插入行列号
  */
@@ -23,12 +22,12 @@ const sourceCode = `
     }
 `;
 
-const ast = parser.parse(sourceCode, {
+const ast = parse(sourceCode, {
   sourceType: 'unambiguous',
   plugins: ['jsx'],
 });
 
-traverse.default(ast, {
+traverse(ast, {
   CallExpression(path) {
     console.log('path', path);
     if (
@@ -42,5 +41,5 @@ traverse.default(ast, {
   },
 });
 
-const { code } = generate.default(ast);
+const { code } = generate(ast);
 console.log(code);
