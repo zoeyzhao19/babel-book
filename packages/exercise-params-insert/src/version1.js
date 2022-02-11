@@ -29,7 +29,6 @@ const ast = parse(sourceCode, {
 
 traverse(ast, {
   CallExpression(path) {
-    console.log('path', path);
     if (
       types.isMemberExpression(path.node.callee) &&
       path.node.callee.object.name === 'console' &&

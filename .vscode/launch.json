@@ -1,0 +1,28 @@
+{
+  "configurations": [
+    {
+      "name": "插入函数调用参数-version1",
+      "program": "${workspaceFolder}/packages/exercise-params-insert/src/version1.js",
+      "request": "launch",
+      "type": "node"
+    },
+    {
+      "name": "插入函数调用参数-version2",
+      "program": "${workspaceFolder}/packages/exercise-params-insert/src/version2.js",
+      "request": "launch",
+      "type": "node"
+    },
+    {
+      "name": "插入函数调用参数-version3",
+      "program": "${workspaceFolder}/packages/exercise-params-insert/src/version3.js",
+      "request": "launch",
+      "type": "node"
+    },
+    {
+      "name": "插入函数调用参数-version4",
+      "program": "${workspaceFolder}/packages/exercise-params-insert/src/version4.js",
+      "request": "launch",
+      "type": "node"
+    }
+  ]
+}
