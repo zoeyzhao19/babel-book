@@ -10,6 +10,8 @@ const template = require('@babel/template').default;
 const sourceCode = `
     console.log(1);
 
+    for(let i = 0; i < 10; i++ ){}
+
     function func() {
         console.info(2);
     }
@@ -49,6 +51,16 @@ traverse(ast, {
         path.insertBefore(newNode);
       }
     }
+  },
+  // 优先级高，会覆盖包含的visitor的单独定义
+  'CallExpression|ClassMethod'() {
+    console.log('测试联合');
+  },
+  ClassMethod() {
+    console.log('this is class Method');
+  },
+  Statement() {
+    console.log('test virualtype');
   },
 });
 
