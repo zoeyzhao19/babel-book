@@ -1,0 +1,12 @@
+{
+  "name": "exercise-acorn-add-keyword",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "node src/index.js"
+  },
+  "devDependencies": {
+    "acorn": "^8.1.0"
+  }
+}

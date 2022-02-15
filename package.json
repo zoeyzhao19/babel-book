@@ -7,7 +7,9 @@
   "author": "赵龙生 <zhaolongsheng@tenwit.com>",
   "license": "MIT",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build:acorn": "yarn workspace exercise-acorn-add-keyword build",
+    "search:workspaces": "yarn workspaces info"
   },
   "husky": {
     "hooks": {
@@ -15,6 +17,9 @@
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
+  "workspaces": [
+    "packages/*"
+  ],
   "lint-staged": {
     "packages/**/*.{js,ts,jsx,tsx}": [
       "eslint --fix",
@@ -26,21 +31,13 @@
     ]
   },
   "devDependencies": {
-    "@babel/core": "^7.16.7",
-    "@babel/generator": "^7.16.8",
-    "@babel/parser": "^7.16.8",
-    "@babel/template": "^7.16.7",
-    "@babel/traverse": "^7.16.8",
-    "@babel/types": "^7.16.8",
     "@commitlint/cli": "^14.1.0",
     "@commitlint/config-conventional": "^14.1.0",
-    "babel-plugin-tester": "^10.1.0",
     "eslint": "^8.7.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "husky": "4.3.8",
     "lint-staged": "^12.0.2",
-    "jest": "^27.4.7",
     "prettier": "^2.5.1"
   }
 }
