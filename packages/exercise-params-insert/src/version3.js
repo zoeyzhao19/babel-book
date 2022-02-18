@@ -34,7 +34,6 @@ const targetCalleeName = ['log', 'info', 'error', 'debug'].map((item) => `consol
 
 traverse(ast, {
   CallExpression(path) {
-    console.log('path.node', path.node);
     if (path.node.isNew) {
       return;
     }

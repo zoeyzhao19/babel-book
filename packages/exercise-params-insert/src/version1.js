@@ -28,6 +28,9 @@ const ast = parse(sourceCode, {
 });
 
 traverse(ast, {
+  ExpressionStatement(path) {
+    console.log('test container & parent');
+  },
   CallExpression(path) {
     if (
       types.isMemberExpression(path.node.callee) &&

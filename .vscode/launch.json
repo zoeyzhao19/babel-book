@@ -23,6 +23,12 @@
       "program": "${workspaceFolder}/packages/exercise-params-insert/src/version4.js",
       "request": "launch",
       "type": "node"
+    },
+    {
+      "name": "代码高亮",
+      "program": "${workspaceFolder}/packages/exercise-code-highlight/src/index.js",
+      "request": "launch",
+      "type": "node"
     }
   ]
 }

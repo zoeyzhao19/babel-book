@@ -1,0 +1,15 @@
+{
+  "name": "exercise-babel-transform",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "babel src/bar.js --out-dir lib"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.17.3",
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "core-js": "3"
+  }
+}
