@@ -29,6 +29,12 @@
       "program": "${workspaceFolder}/packages/exercise-code-highlight/src/index.js",
       "request": "launch",
       "type": "node"
+    },
+    {
+      "name": "自动埋点",
+      "program": "${workspaceFolder}/packages/exercise-auto-track/src/index.js",
+      "request": "launch",
+      "type": "node"
     }
   ]
 }

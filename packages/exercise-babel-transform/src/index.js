@@ -4,7 +4,14 @@ const sourceCode = `new Array(5).fill(111)`;
 
 const { code, map } = babel.transformSync(sourceCode, {
   filename: 'a.js',
-  plugins: [],
+  plugins: [
+    [
+      '@babel/transform-runtime',
+      {
+        corejs: 3,
+      },
+    ],
+  ],
   presets: [
     [
       '@babel/env',
