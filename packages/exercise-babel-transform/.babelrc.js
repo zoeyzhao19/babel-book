@@ -1,12 +1,20 @@
 module.exports = {
+  plugins: [
+    [
+      '@babel/transform-runtime',
+      {
+        corejs: 3,
+      },
+    ],
+  ],
   presets: [
     [
       '@babel/preset-env',
       {
         targets: {
-          chrome: '45',
+          chrome: '44',
         },
-        useBuiltIns: 'usage', // or "entry" or "false"
+        useBuiltIns: 'entry', // or "entry" or "false"
         corejs: 3,
       },
     ],

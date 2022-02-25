@@ -122,8 +122,8 @@ const autoI18nPlugin = declare((api, options) => {
 
       const dir = path.join(__dirname, `../${options.outputDir}`);
       fse.ensureDirSync(dir);
-      fse.writeFileSync(path.join(dir, 'zh_CN.js'), content);
-      fse.writeFileSync(path.join(dir, 'en_US.js'), content);
+      fse.writeFileSync(path.join(dir, './zh_CN.js'), content);
+      fse.writeFileSync(path.join(dir, './en_US.js'), content);
     },
   };
 });

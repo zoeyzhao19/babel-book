@@ -41,6 +41,18 @@
       "program": "${workspaceFolder}/packages/exercise-auto-i18n/src/index.js",
       "request": "launch",
       "type": "node"
+    },
+    {
+      "name": "自动api文档",
+      "program": "${workspaceFolder}/packages/exercise-auto-docs/src/index.js",
+      "request": "launch",
+      "type": "node"
+    },
+    {
+      "name": "自动lint",
+      "program": "${workspaceFolder}/packages/exercise-lint/src/index.js",
+      "request": "launch",
+      "type": "node"
     }
   ]
 }

@@ -2,16 +2,16 @@ const babel = require('@babel/core');
 
 const sourceCode = `new Array(5).fill(111)`;
 
-const { code, map } = babel.transformSync(sourceCode, {
+const { code } = babel.transformSync(sourceCode, {
   filename: 'a.js',
-  plugins: [
-    [
-      '@babel/transform-runtime',
-      {
-        corejs: 3,
-      },
-    ],
-  ],
+  // plugins: [
+  //   [
+  //     '@babel/transform-runtime',
+  //     {
+  //       corejs: 3,
+  //     },
+  //   ],
+  // ],
   presets: [
     [
       '@babel/env',
