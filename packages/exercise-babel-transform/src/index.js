@@ -18,7 +18,7 @@ const { code } = babel.transformSync(sourceCode, {
       {
         useBuiltIns: 'usage',
         targets: {
-          browsers: 'Chrome 45',
+          browsers: 'Chrome 44',
         },
         corejs: 3,
       },
