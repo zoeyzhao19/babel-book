@@ -53,6 +53,18 @@
       "program": "${workspaceFolder}/packages/exercise-lint/src/index.js",
       "request": "launch",
       "type": "node"
+    },
+    {
+      "name": "类型检查",
+      "program": "${workspaceFolder}/packages/exercise-type-check/src/index.js",
+      "request": "launch",
+      "type": "node"
+    },
+    {
+      "name": "混淆压缩",
+      "program": "${workspaceFolder}/packages/exercise-mangle-compress/src/index.js",
+      "request": "launch",
+      "type": "node"
     }
   ]
 }
