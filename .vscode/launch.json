@@ -77,6 +77,12 @@
       "program": "${workspaceFolder}/packages/exercise-module-iterator/src/module-analyzer/index.js",
       "request": "launch",
       "type": "node"
+    },
+    {
+      "name": "babel macros",
+      "program": "${workspaceFolder}/packages/exercise-babel-macro/src/index.js",
+      "request": "launch",
+      "type": "node"
     }
   ]
 }
