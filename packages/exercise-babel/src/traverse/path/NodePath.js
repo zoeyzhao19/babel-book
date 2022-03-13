@@ -1,5 +1,6 @@
 const types = require('../../types');
 const Scope = require('./Scope');
+const generate = require('../../generator');
 
 class NodePath {
   constructor(node, parent, parentPath, key, listKey) {
@@ -84,8 +85,12 @@ class NodePath {
     this.node.__shouldSkip = true;
   }
 
+  stop() {
+    // 结束当前path后续所有遍历
+  }
+
   toString() {
-    // return generate(this.node).code;
+    return generate(this.node).code;
   }
 }
 

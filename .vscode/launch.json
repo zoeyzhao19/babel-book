@@ -83,6 +83,14 @@
       "program": "${workspaceFolder}/packages/exercise-babel-macro/src/index.js",
       "request": "launch",
       "type": "node"
+    },
+    {
+      "name": "测试 babel cli",
+      "program": "${workspaceFolder}/packages/exercise-babel/src/cli/index.js", //运行的代码
+      "request": "launch",
+      "type": "node",
+      "args": ["./input/*.js", "--out-dir", "./dist", "--watch"], //命令行参数
+      "cwd": "${workspaceFolder}/packages/exercise-babel/test" //运行的目录
     }
   ]
 }

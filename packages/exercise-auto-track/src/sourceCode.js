@@ -1,8 +1,4 @@
 import tarck3 from 'tracker';
-import aa from 'aa';
-import * as bb from 'bb';
-import { cc } from 'cc';
-import 'dd';
 
 function a() {
   console.log('aaa');

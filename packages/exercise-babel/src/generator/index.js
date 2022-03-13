@@ -32,7 +32,7 @@ class Printer {
   }
 
   newLine() {
-    this.buf = '\n';
+    this.buf += '\n';
     this.printLine++;
     this.printColumn = 0;
   }

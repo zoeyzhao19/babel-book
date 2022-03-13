@@ -25,7 +25,8 @@ function transformSync(code, options) {
     });
 
   traverse(ast, visitors);
-  return generate(ast, code, options.fileName);
+  const result = generate(ast, code, options.fileName);
+  return result;
 }
 
 module.exports = {
